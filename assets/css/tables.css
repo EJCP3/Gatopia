@@ -1,0 +1,56 @@
+
+/* HEADER */
+
+.main-menu{
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    transform: translateY(0);
+}
+
+.btn-menu{
+    display: none;
+}
+
+.main-menu_link {
+  font-size: 1.5rem;
+}
+
+.main-home-eslogan {
+    font-size: 3rem;
+
+  }
+
+  /*  Main */
+
+/* Primer section  */
+  
+.main-container-descripcion_parrafo {
+    font-size: 1.5rem;
+  }
+
+
+  .main-container-tabla_parrafo {
+  
+    font-size: 1.4rem;
+    
+}
+
+  .main-home-descri {
+    width: 40ch;
+    font-size: 1.8rem;
+  }
+
+  /* Segunda section  */
+  
+  .main-servicios-header p {
+    font-size: 2rem;
+  }
+
+.main-servicios-container-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* sexta section  */
+

@@ -1,0 +1,56 @@
+
+.main-container-tabla-contenido {
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 50px 50px;
+  font-size: 1.5rem;
+}
+
+.main-servicios-container-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.main-servicios-cards {
+    width: 95%;
+    max-width: 490px;
+    min-height: 180px;
+    
+  }
+  
+  
+
+  .main-contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #71a9f7;
+
+  }
+
+  .main-contacto-info{
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+    height: 412px;
+    background-color: #fec601;
+
+  
+  }
+
+.main-contacto-info_correo , .main-contacto-info_numero{
+    font-size: 2.5rem;
+  
+  }
+
+  .main-contacto-formulario{
+    width: 40%;
+  } 
+
+  .main-contacto-formulario_form_nombre, .main-contacto-formulario_form_correo, .main-contacto-formulario_form_mensaje{
+    
+    flex-direction: column;
+    justify-content: flex-start;
+  }

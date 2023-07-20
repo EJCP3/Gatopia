@@ -1,0 +1,677 @@
+/* 1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo caja (Box model) --> margin, border, padding, content
+3. Tipografía  --> tipos, tamaños de fuente, etc
+4. Visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más 
+*/
+
+:root {
+  --font-sans: "DM Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --Ruddy-blue: #71a9f7;
+  --Madder: #a20021;
+  --Mikado-Yellow: #fec601;
+  --Feldgrau: #506c64;
+  --melocotón-claro: #ffe9d4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+  
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  min-width: 320px;
+  height: 45vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.591)), url(/assets/img/grupoGato.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.btn-menu img {
+  width: 32px;
+  height: auto;
+  max-width: 100%;
+  filter: invert(1);
+}
+
+.btn-menu {
+  position: absolute;
+  top: 6.4px;
+  right: 10px;
+  width: 27.2px;
+  z-index: 1;
+  cursor: pointer;
+
+}
+
+.main-menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.929);
+  width: 100%;
+  list-style: none;
+  transform: translateY(-100%);
+  transition: 0.3s;
+}
+
+.btn-menu__checkbox {
+  display: none;
+}
+
+.btn-menu__checkbox:checked + .main-menu {
+  transform: translateY(0);
+}
+
+.main-menu-item {
+  padding: 20px;
+}
+
+.main-menu_link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.main-menu_link:hover {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.main-home-img {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.main-home-img figcaption {
+  font-size: 4rem;
+  color: var(--Mikado-Yellow);
+}
+
+.main-home-eslogan {
+  font-size: 1.5rem;
+  padding: 10px;
+  align-self: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.main-home-descri {
+  padding: 0 10px 20px 20px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--melocotón-claro);
+}
+
+.main-home .main-home-button {
+  display: flex;
+  position: absolute;
+  top: 42%;
+  padding: 22px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0rem 0.25rem 0.5rem rgba(255, 255, 255, 0.338);
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.main-home .main-home-button span {
+  width: 24px;
+  height: 20px;
+  margin-top: -3px;
+  background-image: url("../icons/Vector.svg");
+}
+
+/*  Main */
+
+/* Primer section  */
+main {
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+}
+
+.main-container {
+  width: 100%;
+  height: auto;
+  padding: 80px 0 30px;
+  text-align: center;
+  background-color: #131f2b;
+}
+
+.main-container-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 50px;
+  background-image: url("/assets/img/corazonGato.webp");
+  background-size: cover;
+  /*Asegura que no se repita la imagen*/
+  background-position: center;
+  /*asegura que se centre el fondo*/
+  background-repeat: no-repeat;
+  /*toma todo el tamaño disponible de su contenedor*/
+}
+
+.main-container-descripcion {
+  width: 90%;
+  min-width: 238px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-container-descripcion_titulo {
+  margin: 15px;
+  font-size: 2rem;
+  color: var(--Mikado-Yellow);
+}
+
+.main-container-descripcion_parrafo {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #ffffff68;
+}
+.main-container-tabla-titulo {
+  margin-top: 10px;
+  font-size: 2rem;
+  color: var(--Ruddy-blue);
+}
+
+.main-container-tabla-contenido {
+  display: grid;
+  grid-template-columns: 70px 70px;
+  grid-template-rows: 30px 30px;
+  gap: 1px;
+  justify-content: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.main-container-tabla-contenido div {
+  display: grid;
+  place-content: center;
+  font-weight: 650;
+  background-color: black;
+}
+
+.main-container-tabla-contenido div:first-child {
+  border-top-left-radius: 3px;
+}
+
+.main-container-tabla-contenido div:nth-child(2) {
+  border-top-right-radius: 3px;
+}
+
+.main-container-tabla-contenido div:nth-child(3) {
+  border-bottom-left-radius: 3px;
+}
+
+.main-container-tabla-contenido div:last-child {
+  border-bottom-right-radius: 3px;
+}
+
+.main-container-tabla_subdescripcion {
+  width: 180px;
+  height: 20px;
+  padding: 2px;
+  margin: 20px auto;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-align: center;
+  background-color: var(--Ruddy-blue);
+  color: rgb(0, 0, 0);
+}
+
+.main-container-tabla_parrafo {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 15px;
+  font-family: var(--font-sans);
+  text-align: center;
+  color: #ffffff65;
+}
+
+/* Segunda section  */
+
+.main-servicios {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 0 30px;
+  background-color: #78061d;
+}
+
+.main-servicios .main-servicios-logo {
+  display: flex;
+  position: absolute;
+  left: calc(50% - 20px);
+  top: -20px;
+  width: 40px;
+  height: 35px;
+
+  background-image: url("/assets/img/Gatopia.svg");
+}
+
+.main-servicios-header h2 {
+  width: 210px; 
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--Mikado-Yellow);
+}
+
+.main-servicios-header p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+
+}
+
+.main-servicios-cards {
+  width: 85%;
+  min-width: 288px;
+  max-width: 400px;
+  min-height: 170px;
+  margin: 0 auto 20px;
+  padding: 8px;
+  background-color: #980321;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.main-servicios-cards:hover{
+  box-shadow: 0px 4px 8px rgba(26, 25, 25, 0.5);
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+.cards-logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 10px 0 0 5px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-servicios-cards_logo1 {
+  background-image: url("/assets/icons/lata.png");
+}
+
+.main-servicios-cards_logo2 {
+  background-image: url("/assets/icons/jaula.png");
+}
+
+.main-servicios-cards_logo3 {
+  background-image: url("/assets/icons/veterinaria.png");
+}
+
+.main-servicios-cards_logo4 {
+  background-image: url("/assets/icons/organizacion.png");
+}
+
+.main-servicios-cards_logo5 {
+  background-image: url("/assets/icons/voluntario.png");
+}
+
+.main-servicios-cards_logo6 {
+  background-image: url("/assets/icons/cat.png");
+}
+
+.main-servicios-cards_titulo {
+  margin: 10px 0 0 5px;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  color: #fff;
+}
+
+.main-servicios-cards_descripcion {
+  margin: 10px 0 0 5px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem; 
+  color: var(--Mikado-Yellow);
+}
+
+/* Tercera section  */
+
+.main-imagen {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: 40vh;
+  background-image: url("/assets/img/Ayudanos.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+.main-imagen-picture img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.main-imagen h2 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 60px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.6rem;
+  color: white;
+}
+
+/* Cuarta section  */
+
+.main-familia {
+  width: 100%;
+  height: auto;
+  padding: 20px 0 30px;
+  text-align: center;
+  background-color: var(--Ruddy-blue);
+}
+
+.main-familia-header h2 {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.main-familia-header p {
+  margin: 20px 0 20px ;
+  color: rgba(0, 0, 0, 0.717);
+  font-size: 1.2rem;
+  font-weight: 500;
+
+}
+
+.main-familia-slider{
+  display: flex;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  height: auto;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity ;
+
+}
+
+.main-familia-slider::-webkit-scrollbar {
+  
+  height: 0px;
+}
+
+
+
+.main-familia-cards{
+  position: relative;
+  scroll-snap-align: center;
+  width: 50%;
+  min-width: 230px;
+  max-width: 230px;
+  margin: 40px auto 20px;
+  padding: 10px;
+  border-radius: 15px; 
+  background-color: var(--melocotón-claro);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.main-familia-cards_nombre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: calc(50% - 45px);
+  top: -15.5px;
+  width: 100px;
+  height: 30px;  
+  border-radius: 8px;
+  background-color: var(--Mikado-Yellow);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.main-familia-card_img{
+  width: 20rem;
+  height: auto;
+  margin: 10px auto;
+}
+
+.main-familia-card_boton{
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  font-family: "DM Sans", sans-serif;
+  border-radius: 4px;
+  background-color: var(--melocotón-claro);
+  border:var(--Mikado-Yellow)  2px solid;
+  color: rgb(0, 0, 0);
+}
+
+.main-familia-card_boton span{
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  vertical-align: text-bottom;
+
+  background-image: url("/assets/icons/icons-flecha.svg");
+  
+}
+
+/* Quito section  */
+
+.main-contacto{
+  display: flex;
+  flex-direction: column;width: 100%;
+  height: auto;
+  padding: 0px 0 0px;
+}
+
+.main-contacto-info{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--Ruddy-blue);
+  color: rgb(0, 0, 0);
+}
+
+.main-contacto-info_titulo{
+  margin-bottom: 40px;
+  font-size:2.5rem;
+}
+
+.main-contacto-info_correo , .main-contacto-info_numero{
+  padding-bottom: 35px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.main-contacto-info_correo:hover , .main-contacto-info_numero:hover{
+  text-decoration: underline;
+  
+}
+
+
+.main-contacto-formulario{
+  
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  background-color: #FCEEDC; 
+  color: rgb(0, 0, 0);
+  
+} 
+
+.main-contacto-formulario_titulo{
+ 
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+.main-contacto-formulario_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-contacto-formulario_form_nombre, .main-contacto-formulario_form_correo, .main-contacto-formulario_form_mensaje{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  font-size: 2rem;
+}
+
+.main-contacto-formulario_form .form , .formtextarea {
+  width: 300px;
+  height: 20px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 1px 6px 0 #20212447;
+  border: none;
+
+}
+
+.main-contacto-formulario_form .form, .formtextarea{
+  outline: none;
+}
+
+.main-contacto-formulario_form_mensaje .formtextarea{
+  height: 100px;
+  resize: none;
+}
+
+.main-contacto-formulario_form_botton{
+  width: 150px;
+  height: 30px; 
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 0;
+  background: #000000;
+  color: white;
+
+}
+
+.main-contacto-formulario_form_botton:hover{
+  box-shadow: 0px 4px 8px rgb(23, 236, 23);
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+
+
+
+/* Footer*/
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+}
+
+
+
+
+.footer-section-link_lista {
+  margin-right: 30px;
+  padding: 5px;
+}
+
+.footer-section-link_lista a {
+  padding: 5px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+
+}
+
+.footer-section-link_lista a:hover{
+  text-decoration: underline;
+  color: var(--Mikado-Yellow);
+
+ 
+
+}
+
+.footer-section-logo{
+ display: flex;
+ flex-direction: column;
+ justify-content: center ;
+}
+
+
+.footer-section-logo_img{
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 70px;
+}
+
+.footer-section-logo_titulo{
+  font-size: 3rem;
+  color: var(--Mikado-Yellow);
+}
