@@ -34,7 +34,7 @@ header {
   width: 100%;
   min-width: 320px;
   height: 45vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.591)), url(/assets/img/grupoGato.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.591)), url("assets/img/grupoGato.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -152,7 +152,7 @@ header {
   width: 24px;
   height: 20px;
   margin-top: -3px;
-  background-image: url("../icons/Vector.svg");
+  background-image: url("assets/icons/Vector.svg");
 }
 
 /*  Main */
@@ -176,7 +176,7 @@ main {
   width: 150px;
   height: 150px;
   margin: 0 auto 50px;
-  background-image: url("/assets/img/corazonGato.webp");
+  background-image: url("assets/img/corazonGato.webp");
   background-size: cover;
   /*Asegura que no se repita la imagen*/
   background-position: center;
@@ -284,7 +284,7 @@ main {
   width: 40px;
   height: 35px;
 
-  background-image: url("/assets/img/Gatopia.svg");
+  background-image: url("assets/img/Gatopia.svg");
 }
 
 .main-servicios-header h2 {
@@ -333,23 +333,23 @@ main {
 }
 
 .main-servicios-cards_logo1 {
-  background-image: url("/assets/icons/lata.png");
+  background-image: url("assets/icons/lata.png");
 }
 
 .main-servicios-cards_logo2 {
-  background-image: url("/assets/icons/jaula.png");
+  background-image: url("assets/icons/jaula.png");
 }
 
 .main-servicios-cards_logo3 {
-  background-image: url("/assets/icons/veterinaria.png");
+  background-image: url("assets/icons/veterinaria.png");
 }
 
 .main-servicios-cards_logo4 {
-  background-image: url("/assets/icons/organizacion.png");
+  background-image: url("assets/icons/organizacion.png");
 }
 
 .main-servicios-cards_logo5 {
-  background-image: url("/assets/icons/voluntario.png");
+  background-image: url("assets/icons/voluntario.png");
 }
 
 .main-servicios-cards_logo6 {
@@ -380,7 +380,7 @@ main {
   width: 100%;
   min-width: 320px;
   height: 40vh;
-  background-image: url("/assets/img/Ayudanos.webp");
+  background-image: url("assets/img/Ayudanos.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -510,7 +510,7 @@ main {
   height: 19px;
   vertical-align: text-bottom;
 
-  background-image: url("/assets/icons/icons-flecha.svg");
+  background-image: url("assets/icons/icons-flecha.svg");
   
 }
 
